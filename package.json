@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "pug": "^2.0.3"
+    "forever": "^0.15.3",
+    "pug": "^2.0.3",
+    "shipit": "^1.0.2",
+    "shipit-deploy": "^4.1.1"
   }
 }
