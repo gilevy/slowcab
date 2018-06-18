@@ -39,9 +39,9 @@ module.exports = function (shipit) {
   });
 
   shipit.on('built', function () {
-    shipit.remote('cd ~/slowcab; node ~/slowcab/current/node_modules/forever/bin/forever stopall')
+    shipit.remote('cd ~/slowcab/current; source ~/.bash_profile; nvm use 9; node ~/slowcab/current/node_modules/forever/bin/forever stopall')
     setTimeout(function() {
-      shipit.remote('cd ~/slowcab; node ~/slowcab/current/node_modules/forever/bin/forever start app.js')
+      shipit.remote('cd ~/slowcab/current; source ~/.bash_profile; nvm use 9; node ~/slowcab/current/node_modules/forever/bin/forever start app.js')
     }, 4000);
   });
 };
